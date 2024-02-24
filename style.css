@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;/* shortcut: p-0 */
+    box-sizing: border-box;
+}
+#wrapper{
+    height: 100vh;
+    width: 100vw;
+    /* Height of viewPort(Max):100vh*/
+    overflow-x:hidden ;
+    overflow-y: auto;
+    /*distance beteen z plane and eyes is perspective(value does not matter)*/
+    perspective:10px;
+}
+.container{
+    /*for creating flex we used container */
+    position: relative;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    transform-style: preserve-3d;
+    /* nhi to images chipak jayengi isliye preverse-3d use kara*/
+    height: 100%;
+    z-index: -1;
+}
+.background,.foreground{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /* Z index se ye decide hoga ki konsi chiz upar aayegi aur konsi niche */
+    z-index: -1;
+    /* fit image in container */
+}
+.background{
+    object-fit:cover;
+    transform: translateZ(-40px) scale(5);
+    position:relative;
+    background-attachment: fixed;
+    background-size:cover;
+    background-position: center;
+
+}
+.foreground{
+    object-fit: contain;
+    transform: translateZ(-20px) scale(2) ;
+    margin-left:2000px;
+    margin-top: 900px;
+}
+h1{
+    position:absolute;
+    top: 5rem;
+    color: azure;
+    margin-bottom: 200px;
+    font-size: 7rem;
+    letter-spacing: 5px;
+    text-shadow: 0 0 10px rgba(0,0,0,3);
+    font-display:200px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+section{
+    background-color: rgba(45, 45, 45);
+    color: white;
+    padding: 0 0;
+}
+.secHeading{
+    font: size 2rem;
+
+}
+.adventure{
+    font-size: 5rem;
+    margin-left: 8rem;
+}
+.text{
+    font-size: 1.5rem;
+    padding: 0 7rem;
+    margin: 2rem;
+}
+.bg{
+    position:relative;
+    background-attachment: fixed;
+    background-size:cover;
+    background-position: center;
+    height: 500px;
+    object-fit:cover;
+    padding: 0 0;
+}
+/* IMP INTERVIEW QUESTION */
+/* Q. why we used background-image instead of image tag */
+.bg1{
+    background-image: url(biking.jpg);
+}
+.bg2{
+    background-image: url(para-gliding.jpg);
+}
+.bg3{
+    background-image: url(surfing.jpg);
+}
+.desc{
+    position: absolute;
+    background-color: white;
+    padding: 0.5rem 2.5rem;
+    top: 50%;
+    left: 35%;
+    translate: translateX(-50%) translateY(-50%);
+    font-size: 3.5rem;
+    font-weight:600 ;
+    color: black;
+}
+.textL{
+    margin-bottom: 0;
+}
