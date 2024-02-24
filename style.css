@@ -87,13 +87,13 @@ section{
 /* IMP INTERVIEW QUESTION */
 /* Q. why we used background-image instead of image tag */
 .bg1{
-    background-image: url(biking.jpg);
+    background-image: url(biking.webp);
 }
 .bg2{
-    background-image: url(para-gliding.jpg);
+    background-image: url(para-gliding.webp);
 }
 .bg3{
-    background-image: url(surfing.jpg);
+    background-image: url(surfing.webp);
 }
 .desc{
     position: absolute;
